@@ -25,6 +25,30 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [breathPhase, setBreathPhase] = useState<'Inhale' | 'Hold' | 'Exhale'>('Inhale');
+  // Trigger M-Pesa STK Push
+  const triggerMpesaPayment = async (phone: string, amount: number) => {
+    try {
+      const response = await fetch("/.netlify/functions/mpesa", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phone, amount }),
+      });
+
+      const data = await response.json();
+
+      if (data.ResponseCode === "0") {
+        alert("STK Push sent! Check your phone to enter your M-Pesa PIN.");
+        return true;
+      } else {
+        alert(`Payment failed: ${data.ResponseDescription || "Unable to process payment"}`);
+        return false;
+      }
+    } catch (error) {
+      console.error("M-Pesa error:", error);
+      alert("Network error initiating payment.");
+      return false;
+    }
+  };
 
   const focusOptions = [
     'Individual Therapy (Anxiety, Stress, Trauma)',
