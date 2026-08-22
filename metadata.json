@@ -1,0 +1,6 @@
+{
+  "name": "Aora Mental Wellness",
+  "description": "Professional psychological counseling and mental health services by Irene Omondi located on 5th Avenue, Nairobi, Kenya. Telehealth and in-person care.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
