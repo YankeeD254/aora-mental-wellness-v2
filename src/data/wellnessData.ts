@@ -15,12 +15,12 @@ import speechBubbleBrainImg from '../assets/images/speech_bubble_brain_178737894
 import clinicalIntakeStethoscopeImg from '../assets/images/clinical_intake_stethoscope_1787378953318.jpg';
 import youthGrassCircleImg from '../assets/images/youth_grass_circle_1787378970146.jpg';
 
-export const WHATSAPP_URL = 'https://wa.me/254735773392?text=Hello%20Aora%20Mental%20Wellness%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Psychologist%20Irene%20Omondi.';
+export const WHATSAPP_URL = 'https://wa.me/254735773392?text=Hello%20Aora%20Mental%20Wellness%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Psychologist%20Anyango%20Omondi.';
 
 export const THERAPISTS: Therapist[] = [
   {
-    id: 'irene-omondi',
-    name: 'Irene Omondi',
+    id: 'anyango-omondi',
+    name: 'Anyango Omondi',
     title: 'Lead Consultant Psychologist',
     credentials: 'Licensed Clinical Psychologist • 5th Avenue, Nairobi, Kenya',
     specialties: ['Anxiety & Stress Management', 'Trauma & Resilience', 'Couples & Relationship Therapy', 'Mindfulness Integration'],
@@ -171,12 +171,12 @@ export const APPROACH_TABS: ApproachTab[] = [
 export const CLINIC_INFO = {
   name: 'Aora Mental Wellness',
   tagline: 'Professional Psychological Counseling & Somatic Care',
-  leadPsychologist: 'Irene Omondi',
+  leadPsychologist: 'Anyango Omondi',
   leadTitle: 'Lead Clinical Psychologist',
   address: '5th Avenue, Nairobi, Kenya',
   phone: '0735 773392',
   phoneFormatted: '+254 735 773 392',
-  email: 'alexandernathan.ceo@outlook.com',
+  email: 'aoramentalwellness@gmail.com',
   workingHours: 'Monday – Saturday: 8:00 AM – 7:00 PM EAT',
   onlineAvailable: true,
 };
@@ -199,7 +199,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Guided somatic audio exercises library'
     ],
     image: 'https://i.postimg.cc/QMLyk4Xg/Foundational-Individual-Therapy.jpg',
-    therapistLead: 'Irene Omondi (Lead Psychologist)',
+    therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['Generalized Anxiety', 'Life Transitions', 'Overthinking & Burnout', 'Self-Esteem'],
     methods: ['CBT & ACT', 'Mindfulness Integration', 'Psychodynamic Inquiry']
   },
@@ -220,7 +220,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Joint & optional individual check-ins'
     ],
     image: 'https://i.postimg.cc/mg7wRbsN/Couples-Relational-Therapy.jpg',
-    therapistLead: 'Marcus Thorne, LMFT & Irene Omondi',
+    therapistLead: 'Marcus Thorne, LMFT & Anyango Omondi',
     recommendedFor: ['Communication Breakdown', 'Trust Restoration', 'Pre-Marital Alignment', 'Attachment Repair'],
     methods: ['Emotionally Focused Therapy (EFT)', 'Gottman Method', 'Somatic Co-regulation']
   },
@@ -241,7 +241,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Somatic release tracking'
     ],
     image: 'https://i.postimg.cc/N02q42qf/EMDR-Somatic-Trauma-Healing-4.jpg',
-    therapistLead: 'Maya Lin & Irene Omondi',
+    therapistLead: 'Maya Lin & Anyango Omondi',
     recommendedFor: ['PTSD & Complex Trauma', 'Childhood Emotional Wounds', 'Phobias', 'Intrusive Flashbacks'],
     methods: ['EMDR Protocol', 'Somatic Experiencing', 'Resource Tapping']
   },
@@ -262,7 +262,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'One 1-on-1 private intake session included'
     ],
     image: handsSupportCircleImg || 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
-    therapistLead: 'Irene Omondi & Sophia Kim',
+    therapistLead: 'Anyango Omondi & Sophia Kim',
     recommendedFor: ['Social Isolation', 'Emotional Regulation', 'Boundary Setting', 'Empathetic Connection'],
     methods: ['Interpersonal Process Group', 'Polyvagal Grounding', 'Expressive Dialogue']
   },
@@ -283,7 +283,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Wearable & biomarker sleep metric integration'
     ],
     image: 'https://i.postimg.cc/Vk1d21LL/Circadian-Rhythm-Better-Sleep-Council.jpg',
-    therapistLead: 'Dr. Julian Croft & Irene Omondi',
+    therapistLead: 'Dr. Julian Croft & Anyango Omondi',
     recommendedFor: ['Chronic Insomnia', 'Midnight Racing Thoughts', 'Circadian Disruption', 'Morning Brain Fog'],
     methods: ['CBT-I Protocol', 'Photobiomodulation Guidance', 'Autonomic Down-Regulation']
   },
@@ -316,7 +316,7 @@ export const TESTIMONIALS: Testimonial[] = [
     author: 'Wanjiru Mwangi',
     role: 'Creative Director & Founder',
     location: 'Nairobi, Kenya',
-    quote: 'Aora completely altered how I relate to my own mind. Irene Omondi didn’t just give me textbook advice—she helped me understand my nervous system in a way that felt liberating, empathetic, and deeply transformative.',
+    quote: 'Aora completely altered how I relate to my own mind. Anyango Omondi didn’t just give me textbook advice—she helped me understand my nervous system in a way that felt liberating, empathetic, and deeply transformative.',
     avatar: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80',
     focus: 'Overcoming Chronic Anxiety & Burnout',
     timeframe: '6 months with Irene Omondi'
@@ -346,7 +346,7 @@ export const TESTIMONIALS: Testimonial[] = [
 export const FAQS: FaqItem[] = [
   {
     id: 'faq-1',
-    question: 'How do I book a session with Irene Omondi?',
+    question: 'How do I book a session with Anyango Omondi?',
     answer: 'You can easily reserve an initial consultation online through our booking system, call or WhatsApp us directly at 0735 773392, or email alexandernathan.ceo@outlook.com. We will match your schedule and prepare your confidential intake form.',
     category: 'Therapy'
   },
@@ -370,8 +370,8 @@ export const FAQS: FaqItem[] = [
   },
   {
     id: 'faq-5',
-    question: 'What issues can psychologist Irene Omondi help me with?',
-    answer: 'Irene Omondi specializes in anxiety disorders, depression, work-related stress & burnout, trauma recovery, grief, relationship & marriage counseling, self-esteem, and emotional regulation using evidence-based CBT and somatic techniques.',
+    question: 'What issues can psychologist Anyango Omondi help me with?',
+    answer: 'Anyango Omondi specializes in anxiety disorders, depression, work-related stress & burnout, trauma recovery, grief, relationship & marriage counseling, self-esteem, and emotional regulation using evidence-based CBT and somatic techniques.',
     category: 'General'
   }
 ];
