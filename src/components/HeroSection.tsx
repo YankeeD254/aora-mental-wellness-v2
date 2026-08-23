@@ -275,7 +275,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking, onOpenS
                   </div>
 
                   <span className="text-xs font-semibold text-purple-900 ml-2 bg-purple-100/70 px-2.5 py-1 rounded-full">
-                    Lead: Irene Omondi
+                    Lead: Anyango Omondi
                   </span>
                 </div>
 
@@ -301,7 +301,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking, onOpenS
                 )}
               </div>
 
-              {/* Exact Copy tailored for Aora Mental Wellness & Irene Omondi */}
+              {/* Exact Copy tailored for Aora Mental Wellness & Anyango Omondi */}
               <div className="space-y-2">
                 <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                   Welcome to <span className="font-semibold text-gray-900">Aora Mental Wellness</span>, led by consultant psychologist <span className="font-semibold text-purple-900">Irene Omondi</span> at 5th Avenue, Nairobi, Kenya. We provide compassionate, confidential psychotherapy and somatic regulation both in-person and online.
