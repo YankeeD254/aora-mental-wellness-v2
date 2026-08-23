@@ -198,7 +198,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Confidential direct messaging & check-ins',
       'Guided somatic audio exercises library'
     ],
-    image: 'https://i.postimg.cc/QMLyk4Xg/Foundational-Individual-Therapy.jpg',
+  image: ireneOneOnOneImg,
     therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['Generalized Anxiety', 'Life Transitions', 'Overthinking & Burnout', 'Self-Esteem'],
     methods: ['CBT & ACT', 'Mindfulness Integration', 'Psychodynamic Inquiry']
