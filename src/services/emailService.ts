@@ -1,7 +1,7 @@
 /**
  * Email & Notification Service
  * Dispatches booking consultations and newsletter subscriptions
- * Directly routed to: alexandernathan.ceo@outlook.com
+ * Directly routed to: aoramentalwellness@gmail.com
  */
 
 export interface BookingSubmissionPayload {
@@ -33,7 +33,7 @@ const WEB3FORMS_KEY = (import.meta as any).env?.VITE_WEB3FORMS_ACCESS_KEY || 'ao
 export function createBookingMailtoLink(payload: BookingSubmissionPayload): string {
   const subject = encodeURIComponent(`Consultation Booking: ${payload.fullName} - ${payload.focusArea}`);
   const body = encodeURIComponent(
-    `Dear Irene Omondi (Aora Mental Wellness),\n\n` +
+    `Dear Anyango Omondi (Aora Mental Wellness),\n\n` +
     `I would like to confirm my psychological consultation booking details:\n\n` +
     `• Full Name: ${payload.fullName}\n` +
     `• Email: ${payload.email}\n` +
@@ -44,10 +44,10 @@ export function createBookingMailtoLink(payload: BookingSubmissionPayload): stri
     `• Format: ${payload.sessionType.toUpperCase()}\n` +
     `• Additional Notes: ${payload.message || 'None'}\n\n` +
     `Location: 5th Avenue, Nairobi, Kenya / Telehealth\n` +
-    `Contact: 0735 773392 | alexandernathan.ceo@outlook.com\n\n` +
+    `Contact: 0735 773392 | aoramentalwellness@gmail.com\n\n` +
     `Warm regards,\n${payload.fullName}`
   );
-  return `mailto:alexandernathan.ceo@outlook.com?cc=${encodeURIComponent(payload.email)}&subject=${subject}&body=${body}`;
+  return `mailto:aoramentalwellness@gmail.com?cc=${encodeURIComponent(payload.email)}&subject=${subject}&body=${body}`;
 }
 
 /**
@@ -55,7 +55,7 @@ export function createBookingMailtoLink(payload: BookingSubmissionPayload): stri
  */
 export function createBookingWhatsAppLink(payload: BookingSubmissionPayload): string {
   const text = encodeURIComponent(
-    `Hello Irene Omondi (Aora Mental Wellness),\n\n` +
+    `Hello Anyango Omondi (Aora Mental Wellness),\n\n` +
     `I have submitted a consultation request:\n` +
     `• Name: ${payload.fullName}\n` +
     `• Email: ${payload.email}\n` +
@@ -85,7 +85,7 @@ export async function submitBookingInquiry(payload: BookingSubmissionPayload): P
   const formData = {
     access_key: WEB3FORMS_KEY,
     subject: `New Therapy Booking: ${payload.fullName} - ${payload.focusArea}`,
-    to: 'alexandernathan.ceo@outlook.com',
+    to: 'aoramentalwellness@gmail.com',
     from_name: 'Aora Mental Wellness Portal',
     name: payload.fullName,
     email: payload.email,
@@ -115,7 +115,7 @@ export async function submitBookingInquiry(payload: BookingSubmissionPayload): P
     if (response.ok && result?.success) {
       return {
         success: true,
-        message: 'Your booking request has been successfully transmitted to Irene Omondi.',
+        message: 'Your booking request has been successfully transmitted to Anyango Omondi.',
       };
     }
   } catch (err) {
@@ -127,7 +127,7 @@ export async function submitBookingInquiry(payload: BookingSubmissionPayload): P
 
   return {
     success: true,
-    message: 'Your consultation request has been confirmed and routed to Irene Omondi (alexandernathan.ceo@outlook.com).',
+    message: 'Your consultation request has been confirmed and routed to Anyango Omondi (aoramentalwellness@gmail.com).',
   };
 }
 
@@ -142,7 +142,7 @@ export async function submitNewsletterSubscription(payload: NewsletterPayload): 
   const formData = {
     access_key: WEB3FORMS_KEY,
     subject: `New Mental Wellness Newsletter Subscriber: ${payload.email}`,
-    to: 'alexandernathan.ceo@outlook.com',
+    to: 'aoramentalwellness@gmail.com',
     from_name: 'Aora Mental Wellness Subscriber',
     email: payload.email,
     replyto: payload.email,
@@ -179,4 +179,3 @@ export async function submitNewsletterSubscription(payload: NewsletterPayload): 
     message: 'You have been subscribed to Aora Mental Wellness newsletter.',
   };
 }
-
