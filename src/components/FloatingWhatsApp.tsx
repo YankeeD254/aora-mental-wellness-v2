@@ -145,7 +145,7 @@ export const FloatingWhatsApp: React.FC = () => {
             onClick={() => setIsOpen(true)}
           >
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0" />
-            <span className="text-gray-800 font-semibold">Chat with Irene Omondi</span>
+            <span className="text-gray-800 font-semibold">Chat with Anyango Omondi</span>
             <button
               type="button"
               onClick={(e) => {
