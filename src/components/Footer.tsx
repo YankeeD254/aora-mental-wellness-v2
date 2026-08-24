@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUp, Mail, CheckCircle2, AlertCircle, ArrowRight, ShieldCheck, Heart, Sparkles, PhoneCall, MessageCircle } from 'lucide-react';
+import { ArrowUp, CheckCircle2, AlertCircle, ArrowRight, Sparkles, PhoneCall, MessageCircle } from 'lucide-react';
 import { WHATSAPP_URL } from '../data/wellnessData';
 import { submitNewsletterSubscription, EMAIL_REGEX } from '../services/emailService';
 import { BrandLogo } from './BrandLogo';
@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({
       setIsSubscribed(true);
       onSuccessToast(
         'Welcome to Aora Mental Wellness Journal',
-        `We have registered ${email} and sent subscriber confirmation to Irene Omondi (aoramentalwellness@gmail.com).`
+        `We have registered ${email} and sent subscriber confirmation to Anyango Omondi (aoramentalwellness@gmail.com).`
       );
     } catch (err: any) {
       setIsSubmitting(false);
@@ -132,7 +132,7 @@ export const Footer: React.FC<FooterProps> = ({
               <BrandLogo variant="light" size="lg" />
             </a>
             <p className="text-gray-400 text-xs leading-relaxed max-w-sm">
-              Empowering mental and emotional vitality through compassionate, evidence-based psychological care and nervous system regulation. Led by consultant psychologist Irene Omondi.
+              Empowering mental and emotional vitality through compassionate, evidence-based psychological care and nervous system regulation. Led by consultant psychologist Anyango Omondi.
             </p>
             <div className="pt-2 space-y-2 text-gray-300">
               <div className="flex items-center gap-2">
@@ -141,7 +141,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[#A78BFA] font-semibold">Psychologist:</span>
-                <span>Irene Omondi</span>
+                <span>Anyango Omondi</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[#A78BFA] font-semibold">Phone:</span>
@@ -171,7 +171,7 @@ export const Footer: React.FC<FooterProps> = ({
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">About & Practice</h4>
             <ul className="space-y-2 text-gray-400">
               <li><a href="#approach" className="hover:text-white transition-colors">Clinical Approach</a></li>
-              <li><a href="#therapists" className="hover:text-white transition-colors">Irene Omondi Profile</a></li>
+              <li><a href="#therapists" className="hover:text-white transition-colors">Anyango Omondi Profile</a></li>
               <li><button type="button" onClick={onOpenStory} className="hover:text-white transition-colors text-left cursor-pointer">Practice Overview</button></li>
               <li><a href="#testimonials" className="hover:text-white transition-colors">Patient Outcomes</a></li>
               <li><a href="#faq" className="hover:text-white transition-colors">FAQ & Fees</a></li>
@@ -182,7 +182,7 @@ export const Footer: React.FC<FooterProps> = ({
           <div className="lg:col-span-4 space-y-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">Direct Contact</h4>
             <p className="text-gray-400 leading-relaxed text-[11px]">
-              Ready to book with Irene Omondi? Book online or contact our Nairobi office directly.
+              Ready to book with Anyango Omondi? Book online or contact our Nairobi office directly.
             </p>
             <div className="space-y-2.5 max-w-sm">
               <button
@@ -220,7 +220,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
             <div>
-              © {new Date().getFullYear()} Aora Mental Wellness. 5th Avenue, Nairobi, Kenya. Irene Omondi (Lead Psychologist).
+              © {new Date().getFullYear()} Aora Mental Wellness. 5th Avenue, Nairobi, Kenya. Anyango Omondi (Lead Psychologist).
             </div>
 
             <div className="flex items-center gap-6">
