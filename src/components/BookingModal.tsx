@@ -14,6 +14,14 @@ interface BookingModalProps {
   onSuccessToast: (title: string, message: string) => void;
 }
 
+const getLocalDateString = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
 export const BookingModal: React.FC<BookingModalProps> = ({
   isOpen,
   onClose,
@@ -43,8 +51,8 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   const [formData, setFormData] = useState<BookingFormData>({
     focusArea: initialFocusArea || 'Individual Therapy',
-    preferredTherapistId: initialTherapistId || THERAPISTS[0].id,
-    selectedDate: new Date().toISOString().split('T')[0],
+    preferredTherapistId: initialTherapistId || THERAPISTS[0]?.id || '',
+    selectedDate: getLocalDateString(),
     selectedTimeSlot: '11:30 AM (EAT / Nairobi)',
     sessionType: 'video',
     fullName: '',
@@ -61,12 +69,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
       setIsSubmitting(false);
       setIsSuccess(false);
       setErrors({});
-      if (initialFocusArea) {
-        setFormData((prev) => ({ ...prev, focusArea: initialFocusArea }));
-      }
-      if (initialTherapistId) {
-        setFormData((prev) => ({ ...prev, preferredTherapistId: initialTherapistId }));
-      }
+      setFormData((prev) => ({
+        ...prev,
+        focusArea: initialFocusArea || 'Individual Therapy',
+        preferredTherapistId: initialTherapistId || THERAPISTS[0]?.id || '',
+        selectedDate: getLocalDateString(),
+      }));
     }
   }, [isOpen, initialFocusArea, initialTherapistId]);
 
@@ -81,17 +89,21 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   }, [isOpen, isSubmitting, onClose]);
 
   useEffect(() => {
-    let timer: NodeJS.Timeout;
+    let timer1: NodeJS.Timeout;
+    let timer2: NodeJS.Timeout;
     if (isSubmitting) {
       setBreathPhase('Inhale');
-      timer = setTimeout(() => {
+      timer1 = setTimeout(() => {
         setBreathPhase('Hold');
-        setTimeout(() => {
+        timer2 = setTimeout(() => {
           setBreathPhase('Exhale');
         }, 500);
       }, 500);
     }
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
   }, [isSubmitting]);
 
   const validateStep3 = () => {
@@ -171,6 +183,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-md overflow-y-auto">
       <motion.div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="booking-modal-title"
         initial={{ opacity: 0, scale: 0.95, y: 15 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 15 }}
@@ -185,7 +200,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <Sparkles className="w-3.5 h-3.5" />
               <span>Step {step} of 3 • Intake Assessment</span>
             </div>
-            <h3 className="text-xl sm:text-2xl font-bold text-[#1A1A1A]">
+            <h3 id="booking-modal-title" className="text-xl sm:text-2xl font-bold text-[#1A1A1A]">
               {isSuccess ? 'Journey Scheduled' : 'Begin Your Healing Journey'}
             </h3>
           </div>
@@ -405,10 +420,11 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   {THERAPISTS.map((therapist) => {
                     const isSelected = formData.preferredTherapistId === therapist.id;
                     return (
-                      <div
+                      <button
                         key={therapist.id}
+                        type="button"
                         onClick={() => setFormData({ ...formData, preferredTherapistId: therapist.id })}
-                        className={`p-3 rounded-2xl border flex items-center justify-between gap-3 cursor-pointer transition-all ${
+                        className={`w-full p-3 rounded-2xl border flex items-center justify-between gap-3 cursor-pointer transition-all text-left ${
                           isSelected
                             ? 'bg-purple-50 border-[#A78BFA] ring-2 ring-[#A78BFA]/30'
                             : 'bg-white border-gray-200 hover:border-purple-200'
@@ -437,7 +453,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                             <Check className="w-3.5 h-3.5" />
                           </div>
                         )}
-                      </div>
+                      </button>
                     );
                   })}
                 </div>
@@ -452,7 +468,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   </label>
                   <input
                     type="date"
-                    min={new Date().toISOString().split('T')[0]}
+                    min={getLocalDateString()}
                     value={formData.selectedDate}
                     onChange={(e) => setFormData({ ...formData, selectedDate: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#A78BFA] text-xs sm:text-sm text-gray-800 font-medium"
