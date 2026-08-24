@@ -9,7 +9,8 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onOpenBooking, onNavigate }) => {
   return (
-    <footer className="bg-[#120E24] text-gray-300 pt-16 pb-12 relative overflow-hidden border-t border-purple-900/30">
+    // ADDED id="about" AND scroll-mt-20 TO THE FOOTER TAG BELOW:
+    <footer id="about" className="scroll-mt-20 bg-[#120E24] text-gray-300 pt-16 pb-12 relative overflow-hidden border-t border-purple-900/30">
       {/* Ambient background glow accents */}
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-emerald-600/10 rounded-full blur-3xl pointer-events-none" />
