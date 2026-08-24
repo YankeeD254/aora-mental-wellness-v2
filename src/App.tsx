@@ -70,7 +70,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col relative overflow-x-hidden selection:bg-[#DDD6FE] selection:text-[#4C1D95]">
+<div className="min-h-screen bg-[#FAF9F6] text-[#1A1A1A] flex flex-col relative overflow-x-clip selection:bg-[#DDD6FE] selection:text-[#4C1D95]">
       {/* Navigation */}
       <Navbar
         onOpenBooking={handleOpenBooking}
