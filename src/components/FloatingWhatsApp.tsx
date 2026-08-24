@@ -57,7 +57,7 @@ export const FloatingWhatsApp: React.FC = () => {
                 <div className="relative shrink-0">
                   <img
                     src={irene?.avatar || 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80'}
-                    alt="Psychologist Irene Omondi"
+                    alt="Psychologist Anyango Omondi"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80';
@@ -70,7 +70,7 @@ export const FloatingWhatsApp: React.FC = () => {
                 <div className="min-w-0">
                   <div className="flex items-center gap-1.5">
                     <h3 className="font-bold text-sm text-white tracking-tight truncate">
-                      Irene Omondi
+                      Anyango Omondi
                     </h3>
                     <CheckCheck className="w-3.5 h-3.5 text-emerald-200 shrink-0" />
                   </div>
