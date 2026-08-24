@@ -149,7 +149,7 @@ export const Footer: React.FC<FooterProps> = ({
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-[#A78BFA] font-semibold">Email:</span>
-                <a href="mailto:alexandernathan.ceo@outlook.com" className="hover:text-white underline decoration-[#A78BFA]">alexandernathan.ceo@outlook.com</a>
+                <a href="mailto:aoramentalwellness@gmail.com" className="hover:text-white underline decoration-[#A78BFA]">aoramentalwellness@gmail.com</a>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export const Footer: React.FC<FooterProps> = ({
             </div>
 
             <div className="flex items-center gap-6">
-              <a href="mailto:alexandernathan.ceo@outlook.com" className="hover:text-gray-300 transition-colors">alexandernathan.ceo@outlook.com</a>
+              <a href="mailto:aoramentalwellness@gmail.com" className="hover:text-gray-300 transition-colors">aoramentalwellness@gmail.com</a>
               <a href="tel:0735773392" className="hover:text-gray-300 transition-colors">0735 773392</a>
               <a href="#" className="hover:text-gray-300 transition-colors">Confidentiality Notice</a>
 
