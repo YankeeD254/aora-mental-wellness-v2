@@ -18,7 +18,7 @@ export const TherapistSpotlight: React.FC<TherapistSpotlightProps> = ({ onOpenBo
     : THERAPISTS.filter(t => t.specialties.some(s => s.toLowerCase().includes(selectedSpecialty.toLowerCase())));
 
   return (
-    <section className="py-24 bg-[#FAF9F6] relative" id="therapists">
+  <section className="py-24 bg-[#FAF9F6] relative scroll-mt-24" id="about">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
