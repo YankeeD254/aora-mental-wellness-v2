@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, Sparkles, HeartHandshake, MessageCircle } from 'lucide-react';
+import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { WHATSAPP_URL } from '../data/wellnessData';
 import { BrandLogo } from './BrandLogo';
@@ -29,7 +29,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenStory }) =>
     { label: 'Services', href: '#services' },
     { label: 'Treatment', href: '#approach' },
     { label: 'Blog', href: '#biomarkers' },
-    { label: 'About us', href: '#about' },
+    { label: 'About us', href: '#about' }, // Correctly points to <section id="about">
   ];
 
   const handleScrollTo = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenStory }) =>
             <a
               href="tel:0735773392"
               className="text-xs font-semibold text-gray-700 hover:text-purple-900 px-3 py-2 transition-colors flex items-center gap-1.5"
-              title="Call Irene Omondi - 0735 773392"
+              title="Call Anyango Omondi - 0735 773392"
             >
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               <span>0735 773392</span>
@@ -165,7 +165,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking, onOpenStory }) =>
                   }}
                   className="flex items-center justify-center w-full rounded-full py-3.5 px-6 text-sm font-semibold bg-[#A78BFA] text-white hover:bg-[#906fe9] transition-all shadow-md cursor-pointer whitespace-nowrap"
                 >
-                  Book Session with Irene
+                  Book Session with Anyango
                 </button>
               </div>
             </div>
