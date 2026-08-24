@@ -7,7 +7,7 @@ import approachSwingImg from '../assets/images/approach_artistic_swing_178733701
 import cogniwaveHandImg from '../assets/images/cogniwave_hero_hand_1787336992035.jpg';
 
 // Uploaded & generated artwork assets for therapy pillars
-import ireneOneOnOneImg from '../assets/images/irene_one_on_one_178737941059.jpg';
+import ireneOneOnOneImg from '../assets/images/irene one on one 1787379410559.jpg';
 import mentalHealthLineartImg from '../assets/images/mental_health_lineart_1787378981497.jpg';
 import mentalTangleCbtImg from '../assets/images/mental_tangle_cbt_1787378915730.jpg';
 import handsSupportCircleImg from '../assets/images/hands_support_circle_1787378928725.jpg';
