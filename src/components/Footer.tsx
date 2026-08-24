@@ -41,7 +41,7 @@ export const Footer: React.FC<FooterProps> = ({
       setIsSubscribed(true);
       onSuccessToast(
         'Welcome to Aora Mental Wellness Journal',
-        `We have registered ${email} and sent subscriber confirmation to Irene Omondi (alexandernathan.ceo@outlook.com).`
+        `We have registered ${email} and sent subscriber confirmation to Irene Omondi (aoramentalwellness@gmail.com).`
       );
     } catch (err: any) {
       setIsSubmitting(false);
