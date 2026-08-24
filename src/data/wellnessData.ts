@@ -24,70 +24,14 @@ export const THERAPISTS: Therapist[] = [
     title: 'Lead Consultant Psychologist',
     credentials: 'Licensed Clinical Psychologist • 5th Avenue, Nairobi, Kenya',
     specialties: ['Anxiety & Stress Management', 'Trauma & Resilience', 'Couples & Relationship Therapy', 'Mindfulness Integration'],
-    bio: 'Irene Omondi is a certified clinical psychologist based in Nairobi, Kenya. She synthesizes evidence-based cognitive behavioral therapy with compassionate, somatic regulation to help individuals and couples build enduring emotional balance and mental vitality.',
+    bio: 'Anyango Omondi is a certified clinical psychologist based in Nairobi, Kenya. She synthesizes evidence-based cognitive behavioral therapy with compassionate, somatic regulation to help individuals and couples build enduring emotional balance and mental vitality.',
     rating: 4.99,
     reviewsCount: 184,
     availableDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     avatar: ireneOneOnOneImg,
     badge: 'Lead Psychologist',
     experienceYears: 10,
-  },
-  {
-    id: 'marcus-thorne',
-    name: 'Marcus Thorne, LMFT',
-    title: 'Somatic & Relationship Specialist',
-    credentials: 'M.A. • Licensed Marriage & Family Counselor',
-    specialties: ['Couples Resonance', 'Attachment Repair', 'Somatic Experiencing'],
-    bio: 'Marcus focuses on emotional attunement and nervous system regulation to help clients navigate relational impasses and deepen intimacy.',
-    rating: 4.95,
-    reviewsCount: 118,
-    availableDays: ['Tue', 'Wed', 'Fri'],
-    avatar: 'https://i.postimg.cc/SRDWjsKw/Marcus-Thorne.jpg',
-    badge: 'Couples Lead',
-    experienceYears: 9,
-  },
-  {
-    id: 'maya-lin',
-    name: 'Maya Lin, LCSW',
-    title: 'Integrative Wellness & Trauma Specialist',
-    credentials: 'MSW • EMDR Certified Practitioner',
-    specialties: ['Trauma Integration', 'Inner Child Healing', 'Breathwork'],
-    bio: 'Maya bridges trauma-informed somatic interventions with compassionate inquiry, guiding individuals through gentle release and renewal.',
-    rating: 4.99,
-    reviewsCount: 164,
-    availableDays: ['Mon', 'Wed', 'Fri', 'Sat'],
-    avatar: 'https://i.postimg.cc/wTn12Jnf/Maya-Lin.jpg',
-    badge: 'Trauma & EMDR',
-    experienceYears: 11,
-  },
-  {
-    id: 'dr-julian-croft',
-    name: 'Dr. Julian Croft, M.D.',
-    title: 'Holistic Neuro-Psychiatrist',
-    credentials: 'Board Certified Psychiatrist & Sleep Specialist',
-    specialties: ['Circadian Medicine', 'Bio-optimization', 'Mood Dynamics'],
-    bio: 'Dr. Croft combines conservative biomarker tracking and lifestyle neuroscience to support mental clarity and restorative sleep patterns.',
-    rating: 4.96,
-    reviewsCount: 97,
-    availableDays: ['Wed', 'Thu', 'Fri'],
-    avatar: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=400&q=80',
-    badge: 'Neuroscience',
-    experienceYears: 14,
-  },
-  {
-    id: 'sophia-kim',
-    name: 'Sophia Kim, LPC, RYT',
-    title: 'Mind-Body Resonance Counselor',
-    credentials: 'Applied Psychology • Registered Yoga & Breath Guide',
-    specialties: ['Life Transitions', 'Vagus Nerve Regulation', 'Creative Unblocking'],
-    bio: 'Sophia works at the intersection of psychology, expressive arts, and polyvagal science to empower emotional resilience and creative joy.',
-    rating: 4.97,
-    reviewsCount: 125,
-    availableDays: ['Mon', 'Tue', 'Wed', 'Thu'],
-    avatar: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=400&q=80',
-    badge: 'Mind-Body',
-    experienceYears: 8,
-  },
+  }
 ];
 
 export const APPROACH_TABS: ApproachTab[] = [
@@ -188,12 +132,12 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
     category: 'Individual',
     tagline: 'Personalized 1-on-1 psychotherapeutic care',
     description: 'Deep weekly sessions focused on navigating life transitions, unwinding chronic anxiety, and reclaiming your natural baseline of peace.',
-    longDescription: 'Our foundational individual therapy is tailored to your distinct emotional landscape. Working 1-on-1 with Irene Omondi and her clinical team, you will map out historical patterns, establish reliable nervous system anchors, and cultivate practical tools for cognitive freedom.',
+    longDescription: 'Our foundational individual therapy is tailored to your distinct emotional landscape. Working 1-on-1 with Anyango Omondi, you will map out historical patterns, establish reliable nervous system anchors, and cultivate practical tools for cognitive freedom.',
     duration: '50 mins / session',
     sessions: 'Weekly or Bi-weekly',
     price: 'KES 4,500 / $45',
     features: [
-      'Dedicated licensed clinical psychologist (Irene Omondi)',
+      'Dedicated licensed clinical psychologist (Anyango Omondi)',
       'Personalized care blueprint & progress tracker',
       'Confidential direct messaging & check-ins',
       'Guided somatic audio exercises library'
@@ -220,7 +164,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Joint & optional individual check-ins'
     ],
     image: 'https://i.postimg.cc/mg7wRbsN/Couples-Relational-Therapy.jpg',
-    therapistLead: 'Marcus Thorne, LMFT & Anyango Omondi',
+    therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['Communication Breakdown', 'Trust Restoration', 'Pre-Marital Alignment', 'Attachment Repair'],
     methods: ['Emotionally Focused Therapy (EFT)', 'Gottman Method', 'Somatic Co-regulation']
   },
@@ -235,13 +179,13 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
     sessions: '8 to 16 Sessions',
     price: 'KES 5,500 / $55',
     features: [
-      'Certified clinical trauma specialists',
+      'Certified clinical trauma specialist',
       'Advanced bilateral audio/visual stimulation tech',
       'Safe container stabilization preparation',
       'Somatic release tracking'
     ],
     image: 'https://i.postimg.cc/N02q42qf/EMDR-Somatic-Trauma-Healing-4.jpg',
-    therapistLead: 'Maya Lin & Anyango Omondi',
+    therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['PTSD & Complex Trauma', 'Childhood Emotional Wounds', 'Phobias', 'Intrusive Flashbacks'],
     methods: ['EMDR Protocol', 'Somatic Experiencing', 'Resource Tapping']
   },
@@ -251,7 +195,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
     category: 'Group',
     tagline: 'Small cohort supportive group therapy',
     description: 'A confidential, therapist-guided circle of 6–8 peers exploring shared challenges, emotional regulation, and collective wisdom.',
-    longDescription: 'Group therapy creates a profound sense of shared humanity. In this weekly 8-week circle led by Irene Omondi, members explore vulnerability, boundary-setting, and emotional resonance.',
+    longDescription: 'Group therapy creates a profound sense of shared humanity. In this weekly 8-week circle led by Anyango Omondi, members explore vulnerability, boundary-setting, and emotional resonance.',
     duration: '90 mins / session',
     sessions: '8-Week Cohort',
     price: 'KES 2,500 / $25',
@@ -262,7 +206,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'One 1-on-1 private intake session included'
     ],
     image: handsSupportCircleImg || 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80',
-    therapistLead: 'Anyango Omondi & Sophia Kim',
+    therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['Social Isolation', 'Emotional Regulation', 'Boundary Setting', 'Empathetic Connection'],
     methods: ['Interpersonal Process Group', 'Polyvagal Grounding', 'Expressive Dialogue']
   },
@@ -283,7 +227,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Wearable & biomarker sleep metric integration'
     ],
     image: 'https://i.postimg.cc/Vk1d21LL/Circadian-Rhythm-Better-Sleep-Council.jpg',
-    therapistLead: 'Dr. Julian Croft & Anyango Omondi',
+    therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['Chronic Insomnia', 'Midnight Racing Thoughts', 'Circadian Disruption', 'Morning Brain Fog'],
     methods: ['CBT-I Protocol', 'Photobiomodulation Guidance', 'Autonomic Down-Regulation']
   },
@@ -304,7 +248,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Weekly asynchronous executive check-ins'
     ],
     image: youthGrassCircleImg || 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=800&q=80',
-    therapistLead: 'Irene Omondi & Clinical Team',
+    therapistLead: 'Anyango Omondi & Clinical Team',
     recommendedFor: ['Founder Burnout', 'Decision Fatigue', 'Chronic Overwhelm', 'Compassion Fatigue'],
     methods: ['HRV Biofeedback', 'Cognitive Load Re-engineering', 'Somatic Reset']
   }
@@ -319,7 +263,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'Aora completely altered how I relate to my own mind. Anyango Omondi didn’t just give me textbook advice—she helped me understand my nervous system in a way that felt liberating, empathetic, and deeply transformative.',
     avatar: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=400&q=80',
     focus: 'Overcoming Chronic Anxiety & Burnout',
-    timeframe: '6 months with Irene Omondi'
+    timeframe: '6 months with Anyango Omondi'
   },
   {
     id: 'test-2',
