@@ -247,8 +247,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking, onOpenS
                 Aora • 5th Ave Nairobi
               </div>
 
-              {/* 5 Avatar Stack in Horizontal Row */}
-              <div className="space-y-3">
+              {/* 5 Avatar Stack in Horizontal Row with Absolute Floating Tooltip */}
+              <div className="relative space-y-3">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-3.5 hover:space-x-1 transition-all duration-300">
                     {THERAPISTS.map((therapist) => (
@@ -279,32 +279,36 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenBooking, onOpenS
                   </span>
                 </div>
 
-                {/* Therapist Hover Tooltip */}
-                {activeAvatarHover && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 4 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="p-3 rounded-2xl bg-white border border-purple-200 shadow-xl flex items-center justify-between gap-3 text-xs"
-                  >
-                    <div>
-                      <div className="font-bold text-gray-900">{activeAvatarHover.name}</div>
-                      <div className="text-[11px] text-purple-700">{activeAvatarHover.title} • {activeAvatarHover.badge}</div>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => onOpenBooking(activeAvatarHover.specialties[0], activeAvatarHover.id)}
-                      className="bg-[#A78BFA] text-white px-3 py-1.5 rounded-full font-semibold text-[11px] hover:bg-[#9270f2] transition-colors"
+                {/* Floating Popover - Absolute positioning prevents layout shift */}
+                <AnimatePresence>
+                  {activeAvatarHover && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 6, scale: 0.98 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 4, scale: 0.98 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute top-full left-0 mt-3 z-30 w-72 p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-purple-200 shadow-2xl flex items-center justify-between gap-3 text-xs pointer-events-none"
                     >
-                      Book
-                    </button>
-                  </motion.div>
-                )}
+                      <div>
+                        <div className="font-bold text-gray-900">{activeAvatarHover.name}</div>
+                        <div className="text-[11px] text-purple-700">{activeAvatarHover.title} • {activeAvatarHover.badge}</div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => onOpenBooking(activeAvatarHover.specialties[0], activeAvatarHover.id)}
+                        className="bg-[#A78BFA] text-white px-3 py-1.5 rounded-full font-semibold text-[11px] hover:bg-[#9270f2] transition-colors shrink-0 pointer-events-auto"
+                      >
+                        Book
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
 
               {/* Exact Copy tailored for Aora Mental Wellness & Anyango Omondi */}
               <div className="space-y-2">
                 <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                  Welcome to <span className="font-semibold text-gray-900">Aora Mental Wellness</span>, led by consultant psychologist <span className="font-semibold text-purple-900">Irene Omondi</span> at 5th Avenue, Nairobi, Kenya. We provide compassionate, confidential psychotherapy and somatic regulation both in-person and online.
+                  Welcome to <span className="font-semibold text-gray-900">Aora Mental Wellness</span>, led by consultant psychologist <span className="font-semibold text-purple-900">Anyango Omondi</span> at 5th Avenue, Nairobi, Kenya. We provide compassionate, confidential psychotherapy and somatic regulation both in-person and online.
                 </p>
               </div>
 
