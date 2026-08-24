@@ -198,7 +198,7 @@ export const SERVICE_PROGRAMS: ServiceProgram[] = [
       'Confidential direct messaging & check-ins',
       'Guided somatic audio exercises library'
     ],
-  image: ireneOneOnOneImg,
+    image: ireneOneOnOneImg,
     therapistLead: 'Anyango Omondi (Lead Psychologist)',
     recommendedFor: ['Generalized Anxiety', 'Life Transitions', 'Overthinking & Burnout', 'Self-Esteem'],
     methods: ['CBT & ACT', 'Mindfulness Integration', 'Psychodynamic Inquiry']
@@ -347,7 +347,7 @@ export const FAQS: FaqItem[] = [
   {
     id: 'faq-1',
     question: 'How do I book a session with Anyango Omondi?',
-    answer: 'You can easily reserve an initial consultation online through our booking system, call or WhatsApp us directly at 0735 773392, or email alexandernathan.ceo@outlook.com. We will match your schedule and prepare your confidential intake form.',
+    answer: 'You can easily reserve an initial consultation online through our booking system, call or WhatsApp us directly at 0735 773392, or email aoramentalwellness@gmail.com. We will match your schedule and prepare your confidential intake form.',
     category: 'Therapy'
   },
   {
