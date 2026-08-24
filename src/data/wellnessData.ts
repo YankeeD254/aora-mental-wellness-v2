@@ -28,7 +28,7 @@ export const THERAPISTS: Therapist[] = [
     rating: 4.99,
     reviewsCount: 184,
     availableDays: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-    avatar: 'https://i.postimg.cc/QMLyk4Xg/Foundational-Individual-Therapy.jpg',
+    avatar: ireneOneOnOneImg,
     badge: 'Lead Psychologist',
     experienceYears: 10,
   },
