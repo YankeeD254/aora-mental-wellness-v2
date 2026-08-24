@@ -25,7 +25,7 @@ export interface NewsletterPayload {
 export const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 export const PHONE_REGEX = /^[+]?[(]?[0-9]{1,4}[)]?[-\s./0-9]{7,15}$/;
 
-const WEB3FORMS_KEY = (import.meta as any).env?.VITE_WEB3FORMS_ACCESS_KEY || 'aora-wellness-key';
+const WEB3FORMS_KEY = (import.meta as any).env?.VITE_WEB3FORMS_ACCESS_KEY || '5589b000-da03-42c0-8210-055418faacaf';
 
 /**
  * Generate formatted mailto link for direct client-side email opening
