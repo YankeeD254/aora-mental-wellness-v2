@@ -12,15 +12,15 @@ export const FloatingWhatsApp: React.FC = () => {
   const quickPrompts = [
     {
       label: '📅 Book a 1-on-1 Session',
-      text: 'Hello Irene, I would like to schedule a foundational individual therapy consultation.',
+      text: 'Hello Anyango Omondi, I would like to schedule a foundational individual therapy consultation.',
     },
     {
       label: '👥 Couples Therapy Inquiry',
-      text: 'Hello Irene, I would like to inquire about couples & relational therapy sessions.',
+      text: 'Hello Anyango Omondi, I would like to inquire about couples & relational therapy sessions.',
     },
     {
       label: '📍 Location & Fee Details',
-      text: 'Hello Irene, could you please share more details about your clinic location at 5th Avenue and available session slots?',
+      text: 'Hello Anyango Omondi, could you please share more details about your clinic location at 5th Avenue and available session slots?',
     },
   ];
 
