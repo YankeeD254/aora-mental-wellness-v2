@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { X, Check, ArrowRight, ArrowLeft, Calendar, Clock, User, Mail, Phone, Video, MapPin, MessageSquare, Sparkles, Shield, Heart, Loader2 } from 'lucide-react';
+import { motion } from 'motion/react';
+import { X, Check, ArrowRight, ArrowLeft, Calendar, Clock, User, Mail, Phone, Video, MapPin, MessageSquare, Sparkles, Shield, Heart } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { THERAPISTS } from '../data/wellnessData';
 import { BookingFormData } from '../types';
@@ -25,30 +25,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [breathPhase, setBreathPhase] = useState<'Inhale' | 'Hold' | 'Exhale'>('Inhale');
-  // Trigger M-Pesa STK Push
-  const triggerMpesaPayment = async (phone: string, amount: number) => {
-    try {
-      const response = await fetch("/.netlify/functions/mpesa", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ phone, amount }),
-      });
-
-      const data = await response.json();
-
-      if (data.ResponseCode === "0") {
-        alert("STK Push sent! Check your phone to enter your M-Pesa PIN.");
-        return true;
-      } else {
-        alert(`Payment failed: ${data.ResponseDescription || "Unable to process payment"}`);
-        return false;
-      }
-    } catch (error) {
-      console.error("M-Pesa error:", error);
-      alert("Network error initiating payment.");
-      return false;
-    }
-  };
 
   const focusOptions = [
     'Individual Therapy (Anxiety, Stress, Trauma)',
@@ -68,7 +44,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   const [formData, setFormData] = useState<BookingFormData>({
     focusArea: initialFocusArea || 'Individual Therapy',
     preferredTherapistId: initialTherapistId || THERAPISTS[0].id,
-    selectedDate: '2026-08-25',
+    selectedDate: new Date().toISOString().split('T')[0],
     selectedTimeSlot: '11:30 AM (EAT / Nairobi)',
     sessionType: 'video',
     fullName: '',
@@ -79,7 +55,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-  // Synchronize initial values when modal opens
   useEffect(() => {
     if (isOpen) {
       setStep(1);
@@ -95,7 +70,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     }
   }, [isOpen, initialFocusArea, initialTherapistId]);
 
-  // Esc key to close
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen && !isSubmitting) {
@@ -106,7 +80,6 @@ export const BookingModal: React.FC<BookingModalProps> = ({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, isSubmitting, onClose]);
 
-  // Calming breath animation timer during submission
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isSubmitting) {
@@ -183,7 +156,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
       onSuccessToast(
         'Consultation Request Transmitted!',
-        `Your request has been delivered to Irene Omondi (alexandernathan.ceo@outlook.com). A confirmation has been sent to ${formData.email}.`
+        `Your request has been delivered to Irene Omondi (aoramentalwellness@gmail.com). A confirmation has been sent to ${formData.email}.`
       );
     } catch (err: any) {
       setIsSubmitting(false);
@@ -229,7 +202,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
         {/* Modal Body */}
         <div className="p-6 sm:p-8">
-          {/* Submitting Loading State with Calming Breath Guide */}
+          {/* Submitting Loading State */}
           {isSubmitting && (
             <div className="py-16 flex flex-col items-center justify-center text-center space-y-6">
               <div className="relative flex items-center justify-center">
@@ -267,7 +240,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               <div className="text-center space-y-2">
                 <h4 className="text-2xl font-bold text-gray-900">Your Consultation is Confirmed!</h4>
                 <p className="text-sm text-gray-600 max-w-md mx-auto">
-                  We're honored to accompany you. A calendar invitation and intake summary have been routed to <span className="font-semibold text-purple-900">{formData.email}</span> and lead psychologist Irene Omondi (<span className="font-medium text-gray-800">alexandernathan.ceo@outlook.com</span>).
+                  We're honored to accompany you. A calendar invitation and intake summary have been routed to <span className="font-semibold text-purple-900">{formData.email}</span> and lead psychologist Irene Omondi (<span className="font-medium text-gray-800">aoramentalwellness@gmail.com</span>).
                 </p>
               </div>
 
@@ -298,7 +271,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
               </div>
 
-              {/* Instant Verification & Communication CTAs */}
+              {/* CTAs */}
               <div className="space-y-2 pt-1">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   <a
@@ -479,7 +452,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   </label>
                   <input
                     type="date"
-                    min="2026-08-22"
+                    min={new Date().toISOString().split('T')[0]}
                     value={formData.selectedDate}
                     onChange={(e) => setFormData({ ...formData, selectedDate: e.target.value })}
                     className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:border-[#A78BFA] text-xs sm:text-sm text-gray-800 font-medium"
@@ -561,7 +534,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </label>
                 <input
                   type="tel"
-                  placeholder="+1 (555) 000-0000"
+                  placeholder="+254 735 773392"
                   value={formData.phone}
                   onChange={(e) => {
                     setFormData({ ...formData, phone: e.target.value });
@@ -597,7 +570,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
               <div className="p-3 bg-purple-50/80 rounded-xl border border-purple-100 flex items-center gap-2 text-[11px] text-purple-900">
                 <Shield className="w-4 h-4 text-purple-700 shrink-0" />
-                <span>Protected by HIPAA end-to-end medical encryption. Sent directly to Irene Omondi (alexandernathan.ceo@outlook.com).</span>
+                <span>Protected by HIPAA end-to-end medical encryption. Sent directly to Irene Omondi (aoramentalwellness@gmail.com).</span>
               </div>
             </div>
           )}
